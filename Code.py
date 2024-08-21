@@ -14,17 +14,14 @@ st.map(geo,
     latitude='Latitude',
     longitude='Longitude',
     use_container_width=True
-    )
-
-point = geo.iloc[0:1]
-point
+      )
 
 # Créer une carte Folium centrée sur le point sélectionné
-m = folium.Map(location=[point['Latitude'].values[0], point['Longitude'].values[0]], zoom_start=10)
+m = folium.Map(location=[geo['Latitude'].values[0], geo['Longitude'].values[0]], zoom_start=1)
 
 # Ajouter un marqueur pour ce point
 folium.Marker(
-    location=[point['Latitude'].values[0], point['Longitude'].values[0]],
+    location=[geo['Latitude'].values[0], geo['Longitude'].values[0]],
     popup="First Point"
 ).add_to(m)
 
