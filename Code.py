@@ -5,6 +5,7 @@ import numpy as np
 df = pd.read_csv(r'public_emdat.csv')
 df
 
-geo = df[df['Latitude'] != None]
+geo = df[df['Latitude'].notna()]]
 geo
+
 st.map(geo)
