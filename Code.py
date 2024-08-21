@@ -24,7 +24,7 @@ m = folium.Map(location=[df.iloc[0]['Latitude'], df.iloc[0]['Longitude']], zoom_
 for _, row in df.iterrows():
     folium.Marker(
         location=[row['Latitude'], row['Longitude']],
-        popup='Disaster Type'"
+        popup='Disaster Type'
     ).add_to(m)
 
 # Afficher la carte Folium dans Streamlit
