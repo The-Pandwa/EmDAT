@@ -11,5 +11,5 @@ st.map(geo,
     latitude='Latitude',
     longitude='Longitude',
     zoom = 0,
-    size = 100
+    size = 200
     )
