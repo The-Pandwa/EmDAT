@@ -9,5 +9,6 @@ geo = df[df['Latitude'].notna()][['Latitude', 'Longitude']]
 
 st.map(geo,
     latitude='Latitude',
-    longitude='Longitude'
+    longitude='Longitude',
+    zoom = 2
     )
