@@ -14,8 +14,8 @@ st.map(geo,
     use_container_width=True
     )
 
-point = geo[1]
+point = geo[0]
 point
 
-m = folium.map(location=geo,zoom_start=7)
+m = folium.map(location=point,zoom_start=7)
 m
