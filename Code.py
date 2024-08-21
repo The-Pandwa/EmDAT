@@ -17,5 +17,5 @@ st.map(geo,
 point = geo.iloc[0:1]
 point
 
-m = folium.map(location=point,zoom_start=7)
-m
+folium.map(location = point)
+
