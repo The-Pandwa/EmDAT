@@ -17,12 +17,12 @@ st.map(geo,
       )
 
 # Créer une carte Folium centrée sur le point sélectionné
-m = folium.Map(location=[geo['Latitude'].values[0], geo['Longitude'].values[0]], zoom_start=1)
+m = folium.Map(location = geo, zoom_start=1)
 
 # Ajouter un marqueur pour ce point
 folium.Marker(
-    location=[geo['Latitude'].values[0], geo['Longitude'].values[0]],
-    popup="First Point"
+    location = geo,
+    popup = geo['Latitude']
 ).add_to(m)
 
 # Afficher la carte Folium dans Streamlit
