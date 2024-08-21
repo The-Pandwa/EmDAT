@@ -8,10 +8,8 @@ from streamlit_folium import st_folium
 
 df = pd.read_csv(r'public_emdat.csv')
 
-geo = df[df['Latitude'].notna()][['Latitude', 'Longitude']]
-
 # Afficher la carte avec st.map
-st.map(df,
+st.map(df[df['Latitude'].notna()][['Latitude', 'Longitude']],
     latitude='Latitude',
     longitude='Longitude',
     use_container_width=True
