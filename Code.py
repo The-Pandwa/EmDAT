@@ -5,4 +5,6 @@ import numpy as np
 df = pd.read_csv(r'public_emdat.csv')
 df
 
-st.map(df)
+geo = df(['Latitude', 'Longitude'])
+
+st.map(geo)
