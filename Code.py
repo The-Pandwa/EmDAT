@@ -11,20 +11,20 @@ df = pd.read_csv(r'public_emdat.csv')
 geo = df[df['Latitude'].notna()][['Latitude', 'Longitude']]
 
 # Afficher la carte avec st.map
-st.map(geo,
+st.map(df,
     latitude='Latitude',
     longitude='Longitude',
     use_container_width=True
       )
 
 # Créer une carte Folium centrée sur le premier point de geo
-m = folium.Map(location=[geo.iloc[0]['Latitude'], geo.iloc[0]['Longitude']], zoom_start=2)
+m = folium.Map(location=[df.iloc[0]['Latitude'], df.iloc[0]['Longitude']], zoom_start=2)
 
 # Ajouter des marqueurs pour chaque point
-for _, row in geo.iterrows():
+for _, row in df.iterrows():
     folium.Marker(
         location=[row['Latitude'], row['Longitude']],
-        popup=f"Latitude: {row['Latitude']}, Longitude: {row['Longitude']}"
+        popup='Disaster Type'"
     ).add_to(m)
 
 # Afficher la carte Folium dans Streamlit
