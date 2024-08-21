@@ -12,8 +12,8 @@ geo = df[df['Latitude'].notna()][['Latitude', 'Longitude']]
 
 # Afficher la carte avec st.map
 st.map(df,
-    latitude=df['Latitude'],
-    longitude=df['Longitude'],
+    latitude='Latitude',
+    longitude='Longitude',
     use_container_width=True
       )
 
