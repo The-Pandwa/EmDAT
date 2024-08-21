@@ -6,6 +6,6 @@ df = pd.read_csv(r'public_emdat.csv')
 df
 
 geo = df[df['Latitude'].notna()][['Latitude', 'Longitude']]
-geo
+geo.info()
 
 st.map(geo)
