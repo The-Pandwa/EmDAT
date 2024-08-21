@@ -31,8 +31,8 @@ layer = pdk.Layer(
 view_state = pdk.ViewState(
     latitude=geo['Latitude'].mean(),
     longitude=geo['Longitude'].mean(),
-    zoom=10,
-    pitch=50,
+    zoom=2,
+    pitch=100,
 )
 
 # Créer la carte avec pydeck
