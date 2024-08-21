@@ -26,3 +26,21 @@ layer = pdk.Layer(
     auto_highlight=True,
     tooltip=True,
 )
+
+# Configurer la vue de la carte
+view_state = pdk.ViewState(
+    latitude=geo['Latitude'].mean(),
+    longitude=geo['Longitude'].mean(),
+    zoom=2,
+    pitch=50,
+)
+
+# Créer la carte avec pydeck
+r = pdk.Deck(
+    layers=[layer],
+    initial_view_state=view_state,
+    tooltip={"text": "{info}"}
+)
+
+# Afficher la carte avec Streamlit
+st.pydeck_chart(r)
