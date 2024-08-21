@@ -11,7 +11,11 @@ df = pd.read_csv(r'public_emdat.csv')
 geo = df[df['Latitude'].notna()][['Latitude', 'Longitude']]
 
 # Afficher la carte avec st.map
-st.map(geo, use_container_width=True)
+st.map(geo,
+    latitude='Latitude',
+    longitude='Longitude',
+    use_container_width=True
+      )
 
 # Créer une carte Folium centrée sur le premier point de geo
 m = folium.Map(location=[geo.iloc[0]['Latitude'], geo.iloc[0]['Longitude']], zoom_start=2)
