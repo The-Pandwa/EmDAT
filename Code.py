@@ -14,5 +14,5 @@ st.map(geo,
     )
 
 import folium
-m = folium.Map(location=geo,zoom_start=7)
+m = folium.map(location=geo,zoom_start=7)
 m
