@@ -12,3 +12,7 @@ st.map(geo,
     longitude='Longitude',
     use_container_width=True
     )
+
+import folium
+m = folium.Map(location=geo,zoom_start=7)
+m
