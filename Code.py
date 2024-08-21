@@ -6,5 +6,5 @@ df = pd.read_csv(r'public_emdat.csv')
 df
 
 geo = df[['Latitude', 'Longitude']]
-
-st.map(geo)
+geo
+# st.map(geo)
