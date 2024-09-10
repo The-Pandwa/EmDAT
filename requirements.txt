@@ -4,3 +4,8 @@ numpy
 pydeck
 folium
 streamlit_folium
+streamlit
+torch
+transformers
+sentencepiece
+numpy
